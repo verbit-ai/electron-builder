@@ -29,8 +29,14 @@ export class ElectronAppAdapter implements AppAdapter {
     return this.app.getPath("userData")
   }
 
+  private _baseCachePath: string | null = null
+
   get baseCachePath(): string {
-    return getAppCacheDir()
+    return this._baseCachePath || getAppCacheDir()
+  }
+
+  set baseCachePath(value: string) {
+    this._baseCachePath = value
   }
 
   quit(): void {

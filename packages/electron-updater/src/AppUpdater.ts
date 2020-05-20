@@ -520,6 +520,10 @@ export abstract class AppUpdater extends EventEmitter {
    */
   _testOnlyOptions: TestOnlyUpdaterOptions | null = null
 
+  public setBaseCachePath(value: string) {
+    this.app.baseCachePath = value
+  }
+
   private async getOrCreateDownloadHelper(): Promise<DownloadedUpdateHelper> {
     let result = this.downloadedUpdateHelper
     if (result == null) {

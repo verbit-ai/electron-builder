@@ -19,7 +19,7 @@ export interface AppAdapter {
   /**
    * Path to cache directory.
    */
-  readonly baseCachePath: string
+  baseCachePath: string
 
   whenReady(): Promise<void>
 
