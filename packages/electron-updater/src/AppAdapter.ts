@@ -34,6 +34,7 @@ export function getAppCacheDir() {
   let result: string
   if (process.platform === "win32") {
     result = process.env.LOCALAPPDATA || path.join(homedir, "AppData", "Local")
+    path.join(result, 'Verbit', 'Live-Room', 'updater')
   }
   else if (process.platform === "darwin") {
     result = path.join(homedir, "Library", "Application Support", "Caches")

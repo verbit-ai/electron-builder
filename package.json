@@ -1,4 +1,6 @@
 {
+  "name": "electron-builder",
+  "version": "20.44.4",
   "private": true,
   "license": "MIT",
   "scripts": {
